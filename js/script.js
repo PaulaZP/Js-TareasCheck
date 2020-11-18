@@ -32,10 +32,9 @@ function taskStatus(id, complete) {
       return tarea.complete
     })
     if (check == true) {
-      inco.style.display = 'block';
-      tareas.style.display = 'none';
+      refreshTasksDOM(incompleta);
     }else{
-      tareas.style.display = 'block';
+      refreshTasksDOM(tareas);
     }
   })
   const tareaEncontrada = tareas.find((tarea) => tarea._id === id);
